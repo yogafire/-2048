@@ -2,5 +2,9 @@ body {
 }
 
 .cell {
+  border: 1px solid black;
   background: yellow;
+  float: left;
+  width: 25%;
+  height: 100px;
 }
