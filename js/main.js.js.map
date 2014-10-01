@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "main.js.js",
+  "sourceRoot": "..",
+  "sources": [
+    "js/main.js.map"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,EAAA,CAAA;AAAA,IACE,SAAA,EAAW,CADb;AAAA,IAEE,MAAA,EAAQ,SAFV;AAAA,IAGE,YAAA,EAAc,IAHhB;AAAA,IAIE,SAAA,EAAW,CACT,YADS,CAJb;AAAA,IAOE,OAAA,EAAS,EAPX;AAAA,IAQE,UAAA,EAAY,iBARd;GAAA,CAAA,CAAA;AAAA"
+}

@@ -4,15 +4,15 @@
 }
 
 body {
-  background: #d3d3e5;
+  background: #FFF5EE;
   text-align: center;
   font-family: "Clear Sans";
-  -size: 40px;
+  size: 40px;
 }
 
 .cell {
   border:8px solid #10265A;
-  background: rgba(238, 238, 218, 0.35);
+  background: #E5FFCC;
   float: left;
   width: 25%;
   height: 25%;
@@ -25,9 +25,16 @@ body {
 }
 
 .board {
-    background: #bbada0;
+    background: #d3d3e5;
     margin: 0 auto;
     padding: 8px;
     width: 472px;
     height: 472px;
+    border-radius: 15px;
+}
+
+img {
+  max-height:100%;
+  max-width:100%;
+  margin-bottom:25%;
 }
