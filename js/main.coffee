@@ -1,3 +1,4 @@
+$(".TheRock").trigger("play")
 randomInt = (x) ->
   Math.floor(Math.random() * x)
 
@@ -70,9 +71,9 @@ mergeCells = (cells, direction) ->
         else if cells[a] == cells[b]
           cells[a] *= 2
           cells[b] = 0
-          $(".steal").trigger("play")
           break
         else if cells[b] isnt 0 then break
+          $(".steal").trigger("play")
     cells
 
   if direction in ['right', 'down']
@@ -126,9 +127,9 @@ showBoard = (board) ->
   for row in [0..3]
     for col in [0..3]
       if board[row][col] is 0
-        $(".r#{row}.c#{col} > div").html('')
+        $(".r#{row}.c#{col} > div").html('<img src=\"img/nc.jpg\" width=\"#{width}\">')
       else
-        width = board[row][col] * 10
+        width = board[row][col]
         $(".r#{row}.c#{col} > div").html("<img src=\"img/nc.jpg\" width=\"#{width}\">")
 
 printArray = (array) ->
@@ -178,12 +179,8 @@ $ ->
     else
       #do nothing
 
-
-
-
-
-
-
-
-
-
+$('RESTART') =->
+  @board = buildBoard()
+  generateTile(@board)
+  generateTile(@board)
+  showBoard(@board)

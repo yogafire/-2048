@@ -172,7 +172,7 @@
           if (board[row][col] === 0) {
             _results1.push($(".r" + row + ".c" + col + " > div").html(''));
           } else {
-            width = board[row][col] * 10;
+            width = board[row][col] + 100;
             _results1.push($(".r" + row + ".c" + col + " > div").html("<img src=\"img/nc.jpg\" width=\"" + width + "\">"));
           }
         }
