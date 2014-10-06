@@ -90,6 +90,7 @@
           } else if (cells[a] === cells[b]) {
             cells[a] *= 2;
             cells[b] = 0;
+            $(".steal").trigger("play");
             break;
           } else if (cells[b] !== 0) {
             break;
@@ -161,7 +162,7 @@
   };
 
   showBoard = function(board) {
-    var col, row, _i, _results;
+    var col, row, width, _i, _results;
     _results = [];
     for (row = _i = 0; _i <= 3; row = ++_i) {
       _results.push((function() {
@@ -171,7 +172,8 @@
           if (board[row][col] === 0) {
             _results1.push($(".r" + row + ".c" + col + " > div").html(''));
           } else {
-            _results1.push($(".r" + row + ".c" + col + " > div").html(board[row][col]));
+            width = board[row][col] * 10;
+            _results1.push($(".r" + row + ".c" + col + " > div").html("<img src=\"img/nc.jpg\" width=\"" + width + "\">"));
           }
         }
         return _results1;

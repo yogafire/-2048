@@ -70,6 +70,7 @@ mergeCells = (cells, direction) ->
         else if cells[a] == cells[b]
           cells[a] *= 2
           cells[b] = 0
+          $(".steal").trigger("play")
           break
         else if cells[b] isnt 0 then break
     cells
@@ -127,7 +128,8 @@ showBoard = (board) ->
       if board[row][col] is 0
         $(".r#{row}.c#{col} > div").html('')
       else
-        $(".r#{row}.c#{col} > div").html(board[row][col])
+        width = board[row][col] * 10
+        $(".r#{row}.c#{col} > div").html("<img src=\"img/nc.jpg\" width=\"#{width}\">")
 
 printArray = (array) ->
   console.log "-- Start --"
